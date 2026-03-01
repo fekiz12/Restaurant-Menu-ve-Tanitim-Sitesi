@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Likya Gusto — Ege'nin Lezzet Durağı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">🫒</span> Likya Gusto
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#reservation" class="nav-cta">Rezervasyon</a></li>
+        <li><a href="https://t.me/Likya_Gusto_Bot" target="_blank" rel="noopener noreferrer" class="nav-telegram"><i class="fab fa-telegram"></i> Telegram</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Ege'nin Kalbinden</span>
+      <h1>Likya Gusto</h1>
+      <p>Turkuaz denizin kıyısında, zeytinyağlı Akdeniz lezzetleriyle<br />unutulmaz bir sofra deneyimi.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">Menüyü Keşfet</a>
+        <a href="#reservation" class="btn btn-outline">Rezervasyon Yap</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== MENÜ ========== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lezzetlerimiz</span>
+        <h2>Menümüz</h2>
+        <p>Ege'nin taze otları ve zeytinyağıyla harmanlanan Akdeniz lezzetleri</p>
+      </div>
+
+      <!-- Kategori Filtreleri -->
+      <div class="menu-filters">
+        <button class="filter-btn active" data-category="all">Tümü</button>
+        <button class="filter-btn" data-category="starter">Başlangıçlar</button>
+        <button class="filter-btn" data-category="main">Ana Yemekler</button>
+        <button class="filter-btn" data-category="dessert">Tatlılar</button>
+        <button class="filter-btn" data-category="drink">İçecekler</button>
+      </div>
+
+      <!-- Menü Grid -->
+      <div class="menu-grid">
+        <!-- Başlangıçlar -->
+        <div class="menu-card" data-category="starter">
+          <div class="menu-card-img" style="background-image: url('images/meze-tabagi.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Ege Meze Tabağı</h3>
+              <span class="menu-price">₺285</span>
+            </div>
+            <p>Atom, haydari, acılı ezme, deniz börülcesi ve zeytinyağlı enginar</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="starter">
+          <div class="menu-card-img" style="background-image: url('images/deniz-borulcesi.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Deniz Börülcesi Salatası</h3>
+              <span class="menu-price">₺195</span>
+            </div>
+            <p>Taze deniz börülcesi, limon, sızma zeytinyağı ve sarımsak</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="starter">
+          <div class="menu-card-img" style="background-image: url('images/enginar.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Zeytinyağlı Enginar</h3>
+              <span class="menu-price">₺210</span>
+            </div>
+            <p>Taze enginar, havuç, patates, limon suyu ve dereotu</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="starter">
+          <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Süzme Mercimek Çorbası</h3>
+              <span class="menu-price">₺175</span>
+            </div>
+            <p>Kırmızı mercimek, havuç, soğan ve baharatlarla</p>
+          </div>
+        </div>
+
+        <!-- Ana Yemekler -->
+        <div class="menu-card" data-category="main">
+          <div class="menu-card-img" style="background-image: url('images/levrek.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Izgara Levrek</h3>
+              <span class="menu-price">₺420</span>
+            </div>
+            <p>Taze levrek, ızgara sebzeler, roka ve limon sos eşliğinde</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="menu-card-img" style="background-image: url('images/karides-guvec.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Karidesli Güveç</h3>
+              <span class="menu-price">₺380</span>
+            </div>
+            <p>Karides, domates, biber, sarımsak ve peynirle fırınlanmış güveç</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="main">
+          <div class="menu-card-img" style="background-image: url('images/yaprak-sarma.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Zeytinyağlı Yaprak Sarma</h3>
+              <span class="menu-price">₺230</span>
+            </div>
+            <p>Asma yaprağında pirinç, fıstık, kuş üzümü ve taze otlar</p>
+          </div>
+        </div>
+
+        <!-- Tatlılar -->
+        <div class="menu-card" data-category="dessert">
+          <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Likya Sütlacı</h3>
+              <span class="menu-price">₺190</span>
+            </div>
+            <p>Fırında kızarmış geleneksel sütlaç, tarçın ve vanilya</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="dessert">
+          <div class="menu-card-img" style="background-image: url('images/kabak-tatlisi.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Kabak Tatlısı</h3>
+              <span class="menu-price">₺185</span>
+            </div>
+            <p>Balkabağı, ceviz, tahin ve kaymak</p>
+          </div>
+        </div>
+
+        <!-- İçecekler -->
+        <div class="menu-card" data-category="drink">
+          <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400&h=300&fit=crop')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Taze Limonata</h3>
+              <span class="menu-price">₺155</span>
+            </div>
+            <p>Taze sıkılmış limon, nane ve buz</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drink">
+          <div class="menu-card-img" style="background-image: url('images/turk-kahvesi.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Türk Kahvesi</h3>
+              <span class="menu-price">₺145</span>
+            </div>
+            <p>Geleneksel yöntemle pişirilen Türk kahvesi, lokum ile</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drink">
+          <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Ege Şarabı (Kadeh)</h3>
+              <span class="menu-price">₺195</span>
+            </div>
+            <p>Yerel üzümlerden üretilen beyaz veya kırmızı şarap</p>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="drink">
+          <div class="menu-card-img" style="background-image: url('images/ayran.jpg')"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Ayran</h3>
+              <span class="menu-price">₺35</span>
+            </div>
+            <p>Ev yapımı, köpüklü ayran</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERİ ========== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Atmosfer</span>
+        <h2>Galeri</h2>
+        <p>Likya Gusto'dan kareler</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item-lg">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop" alt="Restoran iç mekan" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1672636401296-72fefd00e745?w=500&h=400&fit=crop" alt="Deniz mahsüllü tabak" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&h=400&fit=crop" alt="Teras alanı" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1660495396534-c56f48502cc5?w=500&h=400&fit=crop" alt="Izgara deniz ürünleri" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=400&fit=crop" alt="Akdeniz sofra sunumu" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=400&fit=crop" alt="Taze Ege salataları" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=500&h=400&fit=crop" alt="Keyifli sofra anları" loading="lazy" />
+          <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HAKKIMIZDA & İLETİŞİM ========== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hikayemiz</span>
+        <h2>Hakkımızda</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-story">
+          <h3>Ege'nin Ruhunu Sofranıza Taşıyoruz</h3>
+          <p>
+            Likya Gusto, antik Likya medeniyetinin zengin kültürel mirasından ilham alarak 2018 yılında kuruldu. 
+            Ege kıyılarının berrak turkuaz sularına nazır restoranımızda, nesillerdir aktarılan geleneksel tarifleri 
+            modern dokunuşlarla yeniden yorumluyoruz.
+          </p>
+          <p>
+            Mutfağımızın kalbi zeytinyağı, taze otlar ve deniz ürünleriyle atıyor. Her sabah yerel pazarlardan 
+            temin ettiğimiz taze malzemelerle, Akdeniz mutfağının en otantik lezzetlerini sofralarınıza sunuyoruz.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-leaf"></i>
+              <span>Taze & Yerel Malzeme</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-water"></i>
+              <span>Deniz Manzarası</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-utensils"></i>
+              <span>Şef Özel Tarifleri</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-info">
+          <!-- Çalışma Saatleri -->
+          <div class="info-card">
+            <h4><i class="fas fa-clock"></i> Çalışma Saatleri</h4>
+            <ul>
+              <li><span>Pazartesi — Cuma</span> <span>11:00 — 02:00</span></li>
+              <li><span>Cumartesi</span> <span>11:00 — 03:00</span></li>
+              <li><span>Pazar</span> <span>11:00 — 03:00</span></li>
+            </ul>
+          </div>
+
+          <!-- İletişim -->
+          <div class="info-card">
+            <h4><i class="fas fa-map-marker-alt"></i> İletişim</h4>
+            <ul class="contact-list">
+              <li><i class="fas fa-location-dot"></i> Kordon Mah. Sahil Cd. No:42, Ölüdeniz / Fethiye</li>
+              <li><i class="fas fa-phone"></i> +90 (252) 616 00 42</li>
+              <li><i class="fas fa-envelope"></i> info@likyagusto.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Harita -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12889.792742!2d29.1137!3d36.5498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c041842a1b3c13%3A0x7c3c3c3c3c3c3c3c!2s%C3%96l%C3%BCdeniz%2C%20Fethiye!5e0!3m2!1str!2str!4v1700000000000"
+          width="100%" height="350" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REZERVASYON ========== -->
+  <section class="reservation-section" id="reservation">
+    <div class="container">
+      <div class="section-header section-header-light">
+        <span class="section-tag">Yerinizi Ayırtın</span>
+        <h2>Rezervasyon</h2>
+        <p>Unutulmaz bir akşam yemeği için masanızı şimdiden ayırtın</p>
+      </div>
+
+      <div class="reservation-wrapper">
+        <div class="reservation-info">
+          <div class="res-info-item">
+            <i class="fas fa-phone-volume"></i>
+            <div>
+              <h4>Telefonla Rezervasyon</h4>
+              <p>+90 (252) 616 00 42</p>
+            </div>
+          </div>
+          <div class="res-info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Rezervasyon Saatleri</h4>
+              <p>Her gün 11:00 — 01:00</p>
+            </div>
+          </div>
+          <div class="res-info-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <h4>Grup Rezervasyonu</h4>
+              <p>10+ kişi için bizi arayınız</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="reservation-form" id="reservationForm">
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Adınız Soyadınız</label>
+            <input type="text" id="name" name="name" placeholder="Örn: Mehmet Yılmaz" required />
+          </div>
+          <div class="form-group">
+            <label for="phone"><i class="fas fa-phone"></i> Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="Örn: 0532 123 45 67" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guests"><i class="fas fa-users"></i> Kişi Sayısı</label>
+              <select id="guests" name="guests" required>
+                <option value="">Seçiniz</option>
+                <option value="1">1 Kişi</option>
+                <option value="2">2 Kişi</option>
+                <option value="3">3 Kişi</option>
+                <option value="4">4 Kişi</option>
+                <option value="5">5 Kişi</option>
+                <option value="6">6 Kişi</option>
+                <option value="7">7 Kişi</option>
+                <option value="8">8 Kişi</option>
+                <option value="9">9 Kişi</option>
+                <option value="10">10 Kişi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date"><i class="fas fa-calendar"></i> Tarih</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="time"><i class="fas fa-clock"></i> Saat</label>
+            <select id="time" name="time" required>
+              <option value="">Önce tarih seçiniz</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span class="btn-text">Rezervasyon Yap</span>
+            <span class="btn-loader" style="display:none"><i class="fas fa-spinner fa-spin"></i> Gönderiliyor...</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><span class="logo-icon">🫒</span> Likya Gusto</h3>
+          <p>Ege'nin eşsiz lezzetlerini, turkuaz denizin kıyısında keşfedin.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Hızlı Bağlantılar</h4>
+          <a href="#hero">Ana Sayfa</a>
+          <a href="#menu">Menü</a>
+          <a href="#gallery">Galeri</a>
+          <a href="#about">Hakkımızda</a>
+          <a href="#reservation">Rezervasyon</a>
+        </div>
+        <div class="footer-contact">
+          <h4>İletişim</h4>
+          <p><i class="fas fa-location-dot"></i> Kordon Mah. Sahil Cd. No:42</p>
+          <p><i class="fas fa-location-dot"></i> Ölüdeniz / Fethiye</p>
+          <p><i class="fas fa-phone"></i> +90 (252) 616 00 42</p>
+          <p><i class="fas fa-envelope"></i> info@likyagusto.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Likya Gusto. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="toast-icon fas fa-check-circle"></i>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
