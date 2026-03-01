@@ -14,7 +14,8 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(3000);
-  console.log('🚀 Likya Gusto Backend çalışıyor: http://localhost:3000');
+  const port = process.env.PORT || 3000;
+  await app.listen(port);
+  console.log(`🚀 Likya Gusto Backend çalışıyor: http://localhost:${port}`);
 }
 bootstrap();
